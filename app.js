@@ -1,14 +1,13 @@
 const app = Vue.createApp({
   data() {
     return {
-      randomNumber: "- - - - -",
+      playedNumbers: [],
     };
   },
   methods: {
-    generateNumber: function () {
-      const returnedNumber = Math.floor(1000 + Math.random() * 9000);
-      this.randomNumber = returnedNumber;
-      return returnedNumber;
+    generateNumber() {
+      const generatedNumber = Math.floor(1000 + Math.random() * 9000);
+      this.playedNumbers.push(generatedNumber);
     },
   },
 });

@@ -19,6 +19,7 @@
     </header>
     <section id="events">
       <button @click="generateNumber">Roll!</button>
+      <p class="winNumber" v-if="playedNumbers.length !== 0">{{ winNumber }}</p>
       <p v-if="playedNumbers.length === 0">No rolls played!</p>
       <ul v-else>
         <li v-for="number in playedNumbers">{{ number }}</li>
